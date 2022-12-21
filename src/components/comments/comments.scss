@@ -1,7 +1,11 @@
-@import "../../style.scss";
+@import "../../styles.scss";
 
 .comments {
   @include themify($themes) {
+
+    @include mobile{
+      padding: 0 30px;
+}
     img {
       width: 40px;
       height: 40px;
@@ -9,58 +13,73 @@
       object-fit: cover;
     }
 
-    .write{
+    .write {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
       margin: 20px 0px;
 
-      input{
-        flex:5;
+      input {
+        // width: 100%;
+        flex: 5;
         padding: 10px;
         border: 1px solid themed("border");
         background-color: transparent;
         color: themed("textColor");
       }
 
-      button{
+      button {
         border: none;
+        padding: 10px;
         background-color: #5271ff;
         color: white;
-        padding: 10px;
-        cursor: pointer;
         border-radius: 3px;
+        cursor: pointer;
       }
     }
 
     .comment {
-      margin: 30px 0px;
+      margin: 30px 0;
       display: flex;
       justify-content: space-between;
       gap: 20px;
 
+
       .info {
-        flex:5;
         display: flex;
         flex-direction: column;
         gap: 3px;
+        flex: 5;
         align-items: flex-start;
+
+        
+      @include mobile{
+         
+        p{
+          margin-top: 10px;
+        }
+      }
 
         span {
           font-weight: 500;
         }
 
-        p{
-          color:themed("textColorSoft")
+        p {
+          color: themed("textColorSoft");
         }
       }
 
-      .date{
-        flex:1;
+      .date {
+        flex: 1;
         align-self: center;
-        color: gray;
         font-size: 12px;
+        color: gray;
+
+        @include mobile{
+          display: flex;
+          align-self: flex-start;
+        }
       }
     }
   }

@@ -1,4 +1,4 @@
-@import "../../style.scss";
+@import "../../styles.scss";
 
 .post {
   @include themify($themes) {
@@ -12,16 +12,23 @@
     .container {
       padding: 20px;
 
+      @include mobile{
+       padding: 5px;
+      }
+
       .user {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include mobile{
+          margin: 0 30px;
+        }
 
         .userInfo {
           display: flex;
           gap: 20px;
 
-          img {
+        img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -31,20 +38,23 @@
           .details {
             display: flex;
             flex-direction: column;
-
-            .name {
-              font-weight: 500;
-            }
-
-            .date {
-              font-size: 12px;
-            }
+           
+          }
+          .name {
+            font-weight: 500;
+          }
+          .date {
+            font-size: 12px;
           }
         }
       }
 
       .content {
-        margin: 20px 0px;
+        margin: 20px 0;
+
+        @include mobile{
+          margin: 0 30px;
+        }
 
         img {
           width: 100%;
@@ -58,13 +68,16 @@
         display: flex;
         align-items: center;
         gap: 20px;
-
+        
+        @include mobile{
+          margin: 0 30px;
+        }
         .item {
           display: flex;
           align-items: center;
           gap: 10px;
-          cursor: pointer;
           font-size: 14px;
+          cursor: pointer;
         }
       }
     }

@@ -8,12 +8,12 @@ export const AuthContextProvider = ({ children }) => {
   );
 
   const login = () => {
-    //TO DO
+    //Todo
     setCurrentUser({
       id: 1,
       name: "John Doe",
       profilePic:
-        "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "https://images.pexels.com/photos/13916254/pexels-photo-13916254.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
     });
   };
 

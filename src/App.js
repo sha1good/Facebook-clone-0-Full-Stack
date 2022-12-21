@@ -1,37 +1,38 @@
 import Login from "./pages/login/Login";
-import Register from "./pages/register/Register";
+import Register from "./pages/regsiter/Regsiter";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
+  Router,
   Outlet,
   Navigate,
 } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import LeftBar from "./components/leftBar/LeftBar";
-import RightBar from "./components/rightBar/RightBar";
+import Leftbar from "./components/leftbar/Leftbar";
+import Rightbar from "./components/rightbar/Rightbar";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
-import "./style.scss";
+import "./styles.scss";
 import { useContext } from "react";
-import { DarkModeContext } from "./context/darkModeContext";
-import { AuthContext } from "./context/authContext";
+import { DarkModeContext } from "./context/DarkmodeContext";
+import { AuthContext } from "./context/AuthContext";
 
 function App() {
-  const {currentUser} = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
 
   const { darkMode } = useContext(DarkModeContext);
+  console.log(darkMode);
 
   const Layout = () => {
     return (
       <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <Navbar />
         <div style={{ display: "flex" }}>
-          <LeftBar />
+          <Leftbar />
           <div style={{ flex: 6 }}>
             <Outlet />
           </div>
-          <RightBar />
+          <Rightbar />
         </div>
       </div>
     );
@@ -41,7 +42,6 @@ function App() {
     if (!currentUser) {
       return <Navigate to="/login" />;
     }
-
     return children;
   };
 
@@ -50,6 +50,7 @@ function App() {
       path: "/",
       element: (
         <ProtectedRoute>
+          {" "}
           <Layout />
         </ProtectedRoute>
       ),
@@ -73,7 +74,6 @@ function App() {
       element: <Register />,
     },
   ]);
-
   return (
     <div>
       <RouterProvider router={router} />

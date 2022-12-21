@@ -1,40 +1,40 @@
-import "./rightBar.scss";
+import "./rightbar.scss";
 
-const RightBar = () => {
+const Rightbar = () => {
   return (
-    <div className="rightBar">
+    <div className="rightbar">
       <div className="container">
         <div className="item">
-          <span>Suggestions For You</span>
+          <span>Suggestions for you</span>
           <div className="user">
             <div className="userInfo">
               <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt=""
               />
               <span>Jane Doe</span>
             </div>
             <div className="buttons">
-              <button>follow</button>
-              <button>dismiss</button>
+              <button>Follow</button>
+              <button>Dismiss</button>
             </div>
           </div>
           <div className="user">
             <div className="userInfo">
               <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt=""
               />
               <span>Jane Doe</span>
             </div>
             <div className="buttons">
-              <button>follow</button>
-              <button>dismiss</button>
+              <button>Follow</button>
+              <button>Dismiss</button>
             </div>
           </div>
         </div>
         <div className="item">
-          <span>Latest Activities</span>
+          <span>Latest activities</span>
           <div className="user">
             <div className="userInfo">
               <img
@@ -45,7 +45,7 @@ const RightBar = () => {
                 <span>Jane Doe</span> changed their cover picture
               </p>
             </div>
-            <span>1 min ago</span>
+            <span>1min ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
@@ -57,7 +57,7 @@ const RightBar = () => {
                 <span>Jane Doe</span> changed their cover picture
               </p>
             </div>
-            <span>1 min ago</span>
+            <span>1min ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
@@ -69,7 +69,7 @@ const RightBar = () => {
                 <span>Jane Doe</span> changed their cover picture
               </p>
             </div>
-            <span>1 min ago</span>
+            <span>1min ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
@@ -81,18 +81,18 @@ const RightBar = () => {
                 <span>Jane Doe</span> changed their cover picture
               </p>
             </div>
-            <span>1 min ago</span>
+            <span>1min ago</span>
           </div>
         </div>
         <div className="item">
-          <span>Online Friends</span>
+          <span> Online Friends</span>
           <div className="user">
             <div className="userInfo">
               <img
                 src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt=""
               />
-              <div className="online" />
+               <div className="online" />
               <span>Jane Doe</span>
             </div>
           </div>
@@ -102,7 +102,7 @@ const RightBar = () => {
                 src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt=""
               />
-              <div className="online" />
+               <div className="online" />
               <span>Jane Doe</span>
             </div>
           </div>
@@ -112,7 +112,7 @@ const RightBar = () => {
                 src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt=""
               />
-              <div className="online" />
+               <div className="online" />
               <span>Jane Doe</span>
             </div>
           </div>
@@ -122,77 +122,7 @@ const RightBar = () => {
                 src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt=""
               />
-              <div className="online" />
-              <span>Jane Doe</span>
-            </div>
-          </div>
-          <div className="user">
-            <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-              <div className="online" />
-              <span>Jane Doe</span>
-            </div>
-          </div>
-          <div className="user">
-            <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-              <div className="online" />
-              <span>Jane Doe</span>
-            </div>
-          </div>
-          <div className="user">
-            <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-              <div className="online" />
-              <span>Jane Doe</span>
-            </div>
-          </div>
-          <div className="user">
-            <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-              <div className="online" />
-              <span>Jane Doe</span>
-            </div>
-          </div>
-          <div className="user">
-            <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-              <div className="online" />
-              <span>Jane Doe</span>
-            </div>
-          </div>
-          <div className="user">
-            <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-              <div className="online" />
-              <span>Jane Doe</span>
-            </div>
-          </div>
-          <div className="user">
-            <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-              <div className="online" />
+               <div className="online" />
               <span>Jane Doe</span>
             </div>
           </div>
@@ -202,4 +132,4 @@ const RightBar = () => {
   );
 };
 
-export default RightBar;
+export default Rightbar;

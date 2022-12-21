@@ -1,4 +1,5 @@
 import "./post.scss";
+
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
@@ -11,9 +12,8 @@ import { useState } from "react";
 const Post = ({ post }) => {
   const [commentOpen, setCommentOpen] = useState(false);
 
-  //TEMPORARY
+  //Temporary
   const liked = false;
-
   return (
     <div className="post">
       <div className="container">
@@ -39,7 +39,7 @@ const Post = ({ post }) => {
         <div className="info">
           <div className="item">
             {liked ? <FavoriteOutlinedIcon /> : <FavoriteBorderOutlinedIcon />}
-            12 Likes
+            12 likes
           </div>
           <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
             <TextsmsOutlinedIcon />

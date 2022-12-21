@@ -1,50 +1,86 @@
-@import "../../style.scss";
+@import "../../styles.scss";
 
 .navbar {
   @include themify($themes) {
     display: flex;
     align-items: center;
+    padding: 10px 20px; //you have to conside this padding(10px top and bottom) in your left and right bar
     justify-content: space-between;
-    padding: 10px 20px;
-    height: 50px;
+    height: 40px;
     border-bottom: 1px solid themed("border");
     position: sticky;
     top: 0;
     background-color: themed("bg");
-    color:themed("textColor");
+    color: themed("textColor");
     z-index: 999;
+
+    @include mobile {
+      padding: 0px;
+    }
 
     .left {
       display: flex;
       align-items: center;
       gap: 30px;
 
+      @include mobile {
+        background-color: themed("bg");
+        height: 40px;
+        padding: 0px;
+        border-bottom: 1px solid themed("border");
+        gap: 10px;
+      }
+
       span {
         font-weight: bold;
-        font-size: 20px;
+        cursor: pointer;
+        font-size: 30px;
         color: themed("logo");
+
+        @include mobile {
+          background-color: themed("bg");
+          color: themed("logo");
+          font-size: 15px;
+        }
       }
 
       .search {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 50px;
         border: 1px solid themed("border");
-        border-radius: 5px;
         padding: 5px;
+        border-radius: 10px;
+        @include mobile {
+          background-color: themed("bg");
+          width: 30px;
+          display: flex;
+          margin-left: 50px;
+        }
 
         input {
           border: none;
+          outline: none;
           width: 500px;
           background-color: transparent;
           color: themed("textColor");
-
-          @include mobile{
-            display: none;
+          @include mobile {
+            background-color: themed("bg");
+            width: 100%;
+            overflow: hidden;
           }
 
-          @include tablet{
+          @include tablet {
             width: 200px;
+          }
+        }
+
+        &.active {
+          @include mobile {
+            position: absolute;
+            width: 70%;
+            top: 70px;
+            cursor: pointer;
           }
         }
       }
@@ -53,9 +89,9 @@
     .right {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 30px;
 
-      @include mobile{
+      @include mobile {
         display: none;
       }
 
@@ -63,9 +99,8 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        font-weight: 500;
 
-        @include tablet{
+        @include tablet {
           display: none;
         }
 
@@ -77,6 +112,7 @@
         }
 
         span {
+          font-weight: 500;
         }
       }
     }

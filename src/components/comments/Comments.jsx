@@ -1,6 +1,6 @@
 import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 import "./comments.scss";
-import { AuthContext } from "../../context/authContext";
 
 const Comments = () => {
   const { currentUser } = useContext(AuthContext);
@@ -23,6 +23,7 @@ const Comments = () => {
         "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=1600",
     },
   ];
+
   return (
     <div className="comments">
       <div className="write">

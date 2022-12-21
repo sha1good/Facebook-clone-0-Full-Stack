@@ -2,7 +2,7 @@ import Post from "../post/Post";
 import "./posts.scss";
 
 const Posts = () => {
-  //TEMPORARY
+    //TEMPORARY
   const posts = [
     {
       id: 1,
@@ -24,9 +24,9 @@ const Posts = () => {
   ];
 
   return <div className="posts">
-    {posts.map(post=>(
-      <Post post={post} key={post.id}/>
-    ))}
+     { posts.map(post =>(
+      <Post key={post.id} post={ post } />
+     ))}
   </div>;
 };
 
