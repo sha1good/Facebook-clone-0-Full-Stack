@@ -1,6 +1,6 @@
 # Facebook clone React,React Query, Sass for frontend, and NodeJs and Mysql for backend
 
-This project  is clone of facebook which has many functionalities like comments
+This project  is clone of facebook which has many functionalities such as posts, comments, share, like and dislike posts and many more
 
 ## Available Scripts
 
