@@ -16,22 +16,42 @@
       .top {
         display: flex;
         align-items: center;
-        gap: 20px;
+        justify-content: space-between;
 
-        img {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          object-fit: cover;
+        .left {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex: 3;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          input {
+            border: none;
+            outline: none;
+            margin: 20px 0;
+            width: 60%;
+            color: themed("textColor");
+            background-color: transparent;
+          }
         }
 
-        input {
-          border: none;
-          outline: none;
-          margin: 20px 0;
-          width: 60%;
-          color: themed("textColor");
-          background-color: transparent;
+        .right {
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+          
+          .file {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 0px;
+          }
         }
       }
 
@@ -70,8 +90,7 @@
         }
 
         .right {
-
-          button{
+          button {
             border: none;
             border-radius: 3px;
             padding: 5px;
@@ -79,7 +98,6 @@
             color: white;
             cursor: pointer;
           }
-          
         }
       }
     }

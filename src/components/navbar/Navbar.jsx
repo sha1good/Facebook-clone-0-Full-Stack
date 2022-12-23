@@ -11,12 +11,20 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { DarkModeContext } from "../../context/DarkmodeContext";
 import { AuthContext } from "../../context/AuthContext";
+import { makeRequest } from "../../Axios";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { darkMode, toggle } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
   const [openSearch, setOpenSearch] = useState(false);
-
+  const [openLogoutMenu, setOpenLogoutMenu] = useState(false);
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+   const response =  await makeRequest.post("/auths/logout");
+   response.status === 200 && localStorage.setItem("user", null)
+    navigate("/login");
+  };
   return (
     <div className="navbar">
       <div className="left">
@@ -43,8 +51,15 @@ const Navbar = () => {
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className="user">
-          <img src={currentUser.profilePic} alt="" />
-          <span>{currentUser.name}</span>
+          <img src={"/upload/" + currentUser.profilePic} alt="" />
+          <button onClick={() => setOpenLogoutMenu(!openLogoutMenu)}>
+            {currentUser.name}
+          </button>
+          {openLogoutMenu && currentUser.id && (
+            <button className="logout" onClick={handleLogout}>
+              Logout
+            </button>
+          )}
         </div>
       </div>
     </div>
