@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Facebook clone React,React Query, Sass for frontend, and NodeJs and Mysql for backend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project  is clone of facebook which has many functionalities like comments
 
 ## Available Scripts
 
