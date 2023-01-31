@@ -1,5 +1,7 @@
 # Facebook clone React,React Query, Sass for frontend, and NodeJs and Mysql for backend
 
+## It consist of two branches: main branch(for client) and the api branch( built with nodejs)
+
 This project  is clone of facebook which has many functionalities such as posts, comments, share, like and dislike posts and many more
 
 ## Available Scripts
